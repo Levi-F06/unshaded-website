@@ -1,0 +1,178 @@
+/* COLOR SCHEME */
+/*
+  #222222  
+  #535354 
+  #6E6E6F 
+  #909091 
+  #FAFAFA 
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;900&display=swap');
+
+html {
+  font-size: 16px;
+}
+
+@keyframes overlay {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    text-shadow: none;
+    color: default;
+  }
+
+  25% {
+    text-shadow: 0px 2px 8px #FF4444;
+    color: #FF4444;
+  }
+
+  100% {
+    color: default;
+    text-shadow: none;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #222222;
+}
+
+header {
+  width: 100vw;
+  height: 20vh;
+  background-color: #222222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#banner {
+  position: sticky;
+  top: 0;
+  background-color: #FAFAFA;
+  z-index: 99;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-item {
+  font-family: "Gothic A1";
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #222222;
+  transition: all .2s;
+}
+
+.nav-item:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #FF4444;
+  transition: all .2s;
+}
+
+
+main {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+main>section {
+  width: 100vw;
+}
+
+#mainPhoto {
+  width: 100vw;
+  height: 50vh;
+  min-height: 550px;
+  background-color: #FAFAFA;
+  position: relative;
+  border-bottom: 1vh solid #FAFAFA;
+}
+
+#mainPhoto>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#mainBandOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 2;
+  animation: overlay 4s infinite 1s;
+}
+
+.pulse-text {
+  animation: pulse 4s infinite 1s;
+}
+
+#socials {
+  padding: 20px;
+  background-color: #222222;
+  color: #FAFAFA;
+  border-bottom: 1vh solid #FAFAFA;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#socials>h1 {
+  font-family: "Gothic A1";
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+
+#socials>nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  flex: 1;
+}
+
+#socials>nav>i {
+  font-size: max(5vh, 5vw);
+  transition: all .2s;
+}
+
+#socials>nav>i:hover {
+  cursor: pointer;
+  color: #FF4444;
+  text-shadow: 0px 2px 8px #FF4444;
+  transition: all .2s;
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+}
