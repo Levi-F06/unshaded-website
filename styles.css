@@ -48,6 +48,12 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Gothic A1";
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 body {
@@ -77,11 +83,10 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 2rem;
 }
 
 .nav-item {
-  font-family: "Gothic A1";
   font-size: 1.5rem;
   font-weight: 900;
   color: #222222;
@@ -95,7 +100,6 @@ header {
   transition: all .2s;
 }
 
-
 main {
   width: 100vw;
   display: flex;
@@ -104,15 +108,15 @@ main {
 
 main>section {
   width: 100vw;
+  border-bottom: 1vh solid #535354;
 }
 
 #mainPhoto {
   width: 100vw;
-  height: 50vh;
-  min-height: 550px;
+  height: 75vh;
+  /* min-height: 550px; */
   background-color: #FAFAFA;
   position: relative;
-  border-bottom: 1vh solid #FAFAFA;
 }
 
 #mainPhoto>img {
@@ -134,21 +138,58 @@ main>section {
   animation: pulse 4s infinite 1s;
 }
 
+.hover-red {
+  transition: all .2s;
+}
+
+.hover-red:hover {
+  cursor: pointer;
+  color: #FF4444;
+  text-shadow: 0px 2px 8px #FF4444;
+  transition: all .2s;
+}
+
+#releases {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 30vh;
+  padding: max(2vh, 2vw);
+  background-color: #FAFAFA;
+  color: #222222;
+}
+
+#releases>div,
+#releases>img {
+  width: 40%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  object-fit: scale-down;
+}
+
+#releases a {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 #socials {
   padding: 20px;
   background-color: #222222;
   color: #FAFAFA;
-  border-bottom: 1vh solid #FAFAFA;
   height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#socials>h1 {
-  font-family: "Gothic A1";
+h1 {
   font-weight: 900;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 #socials>nav {
@@ -161,18 +202,22 @@ main>section {
 
 #socials>nav>i {
   font-size: max(5vh, 5vw);
-  transition: all .2s;
-}
-
-#socials>nav>i:hover {
-  cursor: pointer;
-  color: #FF4444;
-  text-shadow: 0px 2px 8px #FF4444;
-  transition: all .2s;
 }
 
 @media only screen and (max-width: 600px) {
   html {
     font-size: 10px;
+  }
+
+  .nav-item {
+    font-size: 1rem;
+  }
+
+  #mainPhoto {
+    height: 35vh;
+  }
+
+  #releases {
+    flex-direction: column-reverse;
   }
 }
