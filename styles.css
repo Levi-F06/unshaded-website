@@ -219,5 +219,6 @@ h1 {
 
   #releases {
     flex-direction: column-reverse;
+    height: 40vh;
   }
 }
